@@ -25,7 +25,7 @@ variable "vault_user" {
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster to create"
   type        = string
-  default     = ""
+  default     = "mycluster"
 }
 
 variable "force_destroy" {
@@ -43,11 +43,14 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
+  default = "https://github.com/OrgNameRavi/awscluster"
+  
 }
 
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default = "OrgNameRavi"
 }
 
 variable "jx_bot_token" {
